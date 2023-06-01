@@ -1,4 +1,22 @@
+import os
 from math import*
+import time
+
+def current_directory():
+    cwd = os.getcwd():
+        print(cwd)
+def file_path(name):
+    path= os.path.abspath((name))
+    print(path)
+    current directory()
+    name = "scripttest.txt"
+    file_path(name)
+    epc = time.time()
+print(epc)
+localtime = time.locatime(epc)
+print(localtime)
+print(time.ctime(epc))
+
 character = "giraffe academy"
 my_num = 4
 numero = 2.6
