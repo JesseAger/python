@@ -1,4 +1,5 @@
 import smtplib
+from os import path
 
 # Set up the SMTP server and login credentials
 smtp_server = 'smtp.example.com'
@@ -11,6 +12,15 @@ from_address = 'tonijesse034@gmail.com.com'
 to_address = 'agerjesse6@gmail.com'
 subject = 'Hello from Python!'
 message = 'This is a test email.'
+
+def create file(dest):
+  if not(path.isfile(dest)):
+    f=open(dest,'w')
+    f.write("welcome to python scripting")
+    f.close()
+ dest = "absolute path"
+createfile(dest)
+print("File created")
 
 # Connect to the SMTP server
 smtp_obj = smtplib.SMTP(smtp_server, smtp_port)
