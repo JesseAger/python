@@ -11,10 +11,13 @@ smtp_password = '@Tuwei619'
 from_address = 'tonijesse034@gmail.com.com'
 to_address = 'agerjesse6@gmail.com'
 subject = 'Hello from Python!'
-message = 'This is a test email.'
+message = 'This is a test mail.'
 
+#create a file to the destination 'dest'
 def create file(dest):
-  if not(path.isfile(dest)):
+  #check if there exists as file with the same name in that exact location
+  #If there is such a file, skip the creatoin step, otherwise create the file
+  if not(path.isfile(dest)):   
     f=open(dest,'w')
     f.write("welcome to python scripting")
     f.close()
