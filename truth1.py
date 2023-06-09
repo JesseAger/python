@@ -2,6 +2,8 @@ import os
 from math import*
 import time
 
+'''the program gets the library and system infomation from the operating system
+and prints out the current working directory'''
 def current_directory():
     cwd = os.getcwd():
         print(cwd)
