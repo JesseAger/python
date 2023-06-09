@@ -17,7 +17,8 @@ message = 'This is a test mail.'
 def create file(dest):
   #check if there exists as file with the same name in that exact location
   #If there is such a file, skip the creatoin step, otherwise create the file
-  if not(path.isfile(dest)):   
+  if not(path.isfile(dest)):  
+    #the 'w' denotes that the file is open in write mode...so the author can edit it's contents
     f=open(dest,'w')
     f.write("welcome to python scripting")
     f.close()
