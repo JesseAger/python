@@ -44,6 +44,7 @@ smtp_obj.quit()
 ####################################################################
 #the python oop
 class Item:
+    pay_rate = 0.8 #pay rate after 20% discount is given
     def __init__ (self, name: str, price: float, quantity: int):
       #Run validations on the received arguements
       assert price >= 0
