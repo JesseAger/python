@@ -38,3 +38,28 @@ smtp_obj.sendmail(from_address, to_address, email_content)
 
 # Disconnect from the SMTP server
 smtp_obj.quit()
+
+
+
+####################################################################
+#the python oop
+class Item:
+    def __init__ (self, name, price, quantity):
+      self.name = name
+      self.price = price
+      self.quantity = quantity
+         
+    def calculate_total_price(self):
+       return self.price * self.quantity
+    
+
+Item1 = Item("Phone", 100, 5)
+
+
+Item2 = Item("Laptop", 1000, 6)
+
+
+print (Item1.calculate_total_price())
+print(Item2.calculate_total_price())
+
+
