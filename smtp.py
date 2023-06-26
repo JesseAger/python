@@ -45,6 +45,10 @@ smtp_obj.quit()
 #the python oop
 class Item:
     def __init__ (self, name: str, price: float, quantity: int):
+      #Run validations on the received arguements
+      assert price >= 0
+      assert quantity >= 0
+      #assign to the self arguements
       self.name = name
       self.price = price
       self.quantity = quantity
