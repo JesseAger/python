@@ -47,8 +47,8 @@ class Item:
     pay_rate = 0.8 #pay rate after 20% discount is given
     def __init__ (self, name: str, price: float, quantity: int):
       #Run validations on the received arguements
-      assert price >= 0
-      assert quantity >= 0
+      assert price >= 0, f"the price entered is not greater or equal to zero"
+      assert quantity >= 0, f"the quantity entered is not greater or equal to zero"
       #assign to the self arguements
       self.name = name
       self.price = price
