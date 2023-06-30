@@ -56,15 +56,20 @@ class Item:
          
     def calculate_total_price(self):
        return self.price * self.quantity
-    
-
+    def apply_discount():
+      self.price = self.price * Item.pay_rate #the discount will be applied to all the instances of the class 'Item' and canot be overriden
+      #self.price = self.price * self.pay_rate; this discount can be overriden if another pay rate is declared at instance level
+      
 Item1 = Item("Phone", 100, 5)
+Item1.apply_discount()
+print(Item1.price)
 
-
+#declaring pay_rate attribute at an instance level, that is the attribute will only be applied at that instance
 Item2 = Item("Laptop", 1000, 6)
+Item2.pay_rate = 0.9
+Item2.apply_discount()
+print(Item2.price)
 
 
-print (Item1.calculate_total_price())
-print(Item2.calculate_total_price())
 
 
