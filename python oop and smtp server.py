@@ -45,6 +45,7 @@ smtp_obj.quit()
 #the python oop
 class Item:
     pay_rate = 0.8 #pay rate after 20% discount is given
+    all = []
     def __init__ (self, name: str, price: float, quantity: int):
       #Run validations on the received arguements
       assert price >= 0, f"the price entered is not greater or equal to zero"
@@ -53,6 +54,8 @@ class Item:
       self.name = name
       self.price = price
       self.quantity = quantity
+
+      Item.all.append(self) 
          
     def calculate_total_price(self):
        return self.price * self.quantity
@@ -62,13 +65,17 @@ class Item:
       
 Item1 = Item("Phone", 100, 5)
 Item1.apply_discount()
-print(Item1.price)
 
 #declaring pay_rate attribute at an instance level, that is the attribute will only be applied at that instance
 Item2 = Item("Laptop", 1000, 6)
 Item2.pay_rate = 0.9
 Item2.apply_discount()
-print(Item2.price)
+item3 = Item ("hard disk", 200, 2)
+item4 = Item ("ssd", 280, 4)
+item5 = Item("keyboard", 80, 2)
+
+for instance in all:
+  print(instance.price)
 
 
 
